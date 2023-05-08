@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/register"
+        android:title="Registro"
+        app:showAsAction="never" />
+    <item android:id="@+id/contact"
+        android:title="Grupo de contacto"
+        app:showAsAction="never" />
+    <item android:id="@+id/web"
+        android:title="Nuestra web"
+        app:showAsAction="never" />
+</menu>
