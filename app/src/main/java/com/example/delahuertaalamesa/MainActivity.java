@@ -1,6 +1,5 @@
 package com.example.delahuertaalamesa;
 
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -48,38 +47,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
-
-/*
- * FALTA => limpar codigo, organizar, traducir
- *       => administrador movil o web?¿
- *       => adaptar a diferentes tamaños
- */
-
-
-/**
- * De la huerta a la mesa
- * diseño de la app: tema, ocultar botones, pantalla completa
- * <p>
- * facilidad de trabajo: blinding, acceso a internet y glide o picasso
- * <p>
- * ScreenLoad: se trata de la primera pantalla que aparece creando una animacion y da paso al main mediante un intent
- * comprueba si hay internet si no es asi reconecta hasta que haya internet
- * <p>
- * MainActivity:
- * recylerView contiene los *productos del mes,
- * menu toolBar contiene contactar y registrar,
- * menu botones con el calendario, frutas, verduras y favoritos,
- * el spinner funciona cambia los productos del mes seleccionado por defecto mes actual
- * <p>
- * PropertiesProducts: al hacer click pasar el id del producto y sacar sus propiedades *producto por id
- * el calendario cambia de color segun los meses que son del producto
- * <p>
- * SortViewProducts: al hacer click pasa un string clasificando los *productos por frutas verduras y favoritos(para acceder hay que hacer login)
- * <p>
- * Login: te permite crear o acceder/desconectar
- * admin - ¿?
- * users - pueden añadir a favoritos, aparece la estrella en propiedades
- */
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private ActivityMainBinding binding;
@@ -414,10 +381,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      */
     private void alertGifFavorite() {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setTitle("Ahora puedes guardar\ntus productos favoritos");
+        alert.setTitle("");
 
         WebView wv = new WebView(this);
-        wv.loadDataWithBaseURL("", "<img style= width:300px;  src='https://granped.es/huertamesa/pictures/gifFavorite.gif'/>", "text/html", "utf-8", null);
+        wv.loadDataWithBaseURL("", "<button style=\"\n" +
+                "        min-width: 130px;\n" +
+                "        height: 40px;\n" +
+                "        color: #fff;\n" +
+                "        padding: 5px 10px;\n" +
+                "        font-weight: bold;\n" +
+                "        cursor: pointer;\n" +
+                "        transition: all 0.3s ease;\n" +
+                "        position: relative;\n" +
+                "        display: inline-block;\n" +
+                "        outline: none;\n" +
+                "        border-radius: 5px;\n" +
+                "        border: none;\n" +
+                "        background: #efefef;\n" +
+                "        box-shadow: 2px 2px 4px #c8d0e7, -1px -1px 3px #fff;\n" +
+                "        color: #585858;\">\n" +
+                "        <a style=\"text-decoration: none;\" href=\"https://granped.es\">Ahora puedes guardar tus productos favoritos</a>\n" +
+                "\n" +
+                "    </button>", "text/html", "utf-8", null);
 
         wv.setWebViewClient(new WebViewClient() {
             @Override
