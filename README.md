@@ -6,7 +6,7 @@ Os presento "De la huerta a la mesa" una herramienta que sirve para mostrar las 
 
 Espero que esta aplicación para android sirva de utilidad a las personas que accedan a ella.
 
-Incluyo el manual de instalación y el manual de uso.
+Incluyo el manual de instalación, el manual de uso y el ejecutable de la aplicación.
 
 Gracias.
 
@@ -22,6 +22,6 @@ I present you "From the garden to the table" a tool that serves to show the frui
 
 I hope this android application will be useful to the people who access it.
 
-I include the installation manual and the user's manual.
+I include the installation manual, the user's manual and the application executable.
 
 Thank you.

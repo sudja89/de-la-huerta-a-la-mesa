@@ -381,28 +381,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      */
     private void alertGifFavorite() {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setTitle("");
+        alert.setTitle("Ahora puedes guardar tus productos favoritos");
 
         WebView wv = new WebView(this);
-        wv.loadDataWithBaseURL("", "<button style=\"\n" +
-                "        min-width: 130px;\n" +
-                "        height: 40px;\n" +
-                "        color: #fff;\n" +
-                "        padding: 5px 10px;\n" +
-                "        font-weight: bold;\n" +
-                "        cursor: pointer;\n" +
-                "        transition: all 0.3s ease;\n" +
-                "        position: relative;\n" +
-                "        display: inline-block;\n" +
-                "        outline: none;\n" +
-                "        border-radius: 5px;\n" +
-                "        border: none;\n" +
-                "        background: #efefef;\n" +
-                "        box-shadow: 2px 2px 4px #c8d0e7, -1px -1px 3px #fff;\n" +
-                "        color: #585858;\">\n" +
-                "        <a style=\"text-decoration: none;\" href=\"https://granped.es\">Ahora puedes guardar tus productos favoritos</a>\n" +
-                "\n" +
-                "    </button>", "text/html", "utf-8", null);
+        wv.loadDataWithBaseURL("",
+                "<img style=\"max-width: 100%;\" src=\"https://granped.es/webhuertamesa/wp-content/uploads/2023/05/gifFavorite.gif\">",
+                "text/html", "utf-8", null);
 
         wv.setWebViewClient(new WebViewClient() {
             @Override
